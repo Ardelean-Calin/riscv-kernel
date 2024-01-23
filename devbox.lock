@@ -1,0 +1,122 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "bison@latest": {
+      "last_modified": "2024-01-14T03:55:27Z",
+      "resolved": "github:NixOS/nixpkgs/dd5621df6dcb90122b50da5ec31c411a0de3e538#bison",
+      "source": "devbox-search",
+      "version": "3.8.2",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/vzwhs7bwkcvb81wqzffp7vrgf63bjyy0-bison-3.8.2"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/hq50ps5n1mya6g8k8iqy2dyzsmyaxfqf-bison-3.8.2"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/jyrg5ixwn4bphffflww3n5ibjpq7fjar-bison-3.8.2"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/inklb8gjax07ymi117x2654sda4kv53d-bison-3.8.2"
+        }
+      }
+    },
+    "flex@latest": {
+      "last_modified": "2024-01-14T03:55:27Z",
+      "resolved": "github:NixOS/nixpkgs/dd5621df6dcb90122b50da5ec31c411a0de3e538#flex",
+      "source": "devbox-search",
+      "version": "2.6.4",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/vydqsp8prxg681rfrplxrrfbidm3vdg8-flex-2.6.4"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/35bb19kz4bq3w650m0d46gkwzx7sy6v8-flex-2.6.4"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/bl59zwdncwfr69m9bic41v9miyylzp6a-flex-2.6.4"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/yn49prdb8dgvgy7jrzgd7gj0n5r0bvf2-flex-2.6.4"
+        }
+      }
+    },
+    "libelf@latest": {
+      "last_modified": "2024-01-14T03:55:27Z",
+      "resolved": "github:NixOS/nixpkgs/dd5621df6dcb90122b50da5ec31c411a0de3e538#libelf",
+      "source": "devbox-search",
+      "version": "0.8.13",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/xi4adw10qajk3j2rss08cy1gmz7dfipw-libelf-0.8.13"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/hcr5d7jim2by5rsz3nakj5wzyzck2kh3-libelf-0.8.13"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/gsj51vn6ln4b2ypy3gy4rw2az78azrf5-libelf-0.8.13"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/pba7pjdwzf77cnkplsxk94b5smby4ddj-libelf-0.8.13"
+        }
+      }
+    },
+    "ncurses@latest": {
+      "last_modified": "2024-01-14T03:55:27Z",
+      "resolved": "github:NixOS/nixpkgs/dd5621df6dcb90122b50da5ec31c411a0de3e538#ncurses",
+      "source": "devbox-search",
+      "version": "6.4",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/klp8xyib9bfivqz80xhvhyz4z07cjx3f-ncurses-6.4"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/nvvrx9nwlf2h6wwmxag2an2kvlxy1wyv-ncurses-6.4"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/2i1k3zfzb46gs378przc7q5vhzqd8sif-ncurses-6.4"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/v1rk2bvgc8s71cyrhzlcpr4i33gkpx2w-ncurses-6.4"
+        }
+      }
+    },
+    "pkgconfig@latest": {
+      "last_modified": "2023-02-24T09:01:09Z",
+      "resolved": "github:NixOS/nixpkgs/7d0ed7f2e5aea07ab22ccb338d27fbe347ed2f11#pkgconfig",
+      "source": "devbox-search",
+      "version": "0.29.2",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/9jsfq3b42004ipnnvl4d8w52zzdczqkl-pkg-config-wrapper-0.29.2"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/ypjzd3sisblvf3jagspdh25h2x5jaqmd-pkg-config-wrapper-0.29.2"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/lrb01sby9jg4hfqhr32s28igg77bhcwr-pkg-config-wrapper-0.29.2"
+        }
+      }
+    },
+    "wget@latest": {
+      "last_modified": "2024-01-14T03:55:27Z",
+      "resolved": "github:NixOS/nixpkgs/dd5621df6dcb90122b50da5ec31c411a0de3e538#wget",
+      "source": "devbox-search",
+      "version": "1.21.4",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/3dzwf8ifwj4ysah0p1q8r8cz7jvz63bm-wget-1.21.4"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/sc5hvn4x3wcv6k7w4prs4fmbjv73ii5p-wget-1.21.4"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/p73b0krii1sl6q3nznky9q0x44rkvhmy-wget-1.21.4"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/wl52jzgxq6mdd73advr8ikb8hpv2n2l0-wget-1.21.4"
+        }
+      }
+    }
+  }
+}
