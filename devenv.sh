@@ -6,28 +6,28 @@ set -e
 dirname=$(basename "$(pwd)")
 hash=$(md5sum "distrobox.ini" | cut -d' ' -f1)
 
+remove_if_exists() {
+  if test "$(distrobox list | grep "$1")" ; then
+    distrobox assemble rm
+  fi
+}
+
 if test -f "distrobox.ini" ; then
   if ! test -f .hash ; then
-    echo "Hash not found. Generating..."
-    echo "$hash" > .hash
+    echo "Generating new distrobox..."
 
-    # No hash means no container. TODO: Remove distrobox if exists.
+    remove_if_exists "$dirname"
     distrobox assemble create
   else
     # We found the hash.
-    echo "Hash found."
     hash_old=$(cat .hash)
     # If hash is not the same, regenerate.
     if test "$hash_old" != "$hash" ; then
-      distrobox assemble rm
-      distrobox assemble create
-    fi
-
-    # Hash is the same. Test if the distrobox exists.
-    if ! test "$(distrobox list | grep "$dirname")" ; then
+      remove_if_exists "$dirname"
       distrobox assemble create
     fi
   fi
+  echo "$hash" > .hash
 
   # Final step, enter the distrobox
   distrobox enter "$dirname"
