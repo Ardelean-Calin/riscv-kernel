@@ -1,2 +1,6 @@
 src/
+initrd/
+iso/
+bzImage
+initrd.img
 .hash
