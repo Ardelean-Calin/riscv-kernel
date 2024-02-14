@@ -1,6 +1,2 @@
-src/
-initrd/
-iso/
-bzImage
-initrd.img
+build/
 .hash
