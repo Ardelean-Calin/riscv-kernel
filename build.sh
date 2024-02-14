@@ -30,9 +30,10 @@ cd build || exit
 
     # Build the Linux Kernel
     cd "linux-$KERNEL_VERSION" || exit
-      make defconfig
-      make -j"$(nproc)" bzImage
-      cp arch/x86_64/boot/bzImage ../../
+      make ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- defconfig
+      cp ../../../.config .
+      make ARCH=riscv CROSS_COMPILE=riscv64-linux-gnu- -j"$(nproc)"
+      cp arch/riscv/boot/Image ../../
     cd ..
 
     # Download U-Root userland
@@ -42,7 +43,7 @@ cd build || exit
     # Create initramfs (binary root file system)
     cd "u-root-$UROOT_VERSION" || exit
       go build
-      ./u-root -o ../../initramfs.linux_amd64.cpio
+      GOOS=linux GOARCH=riscv64 ./u-root -o ../../initramfs.linux_riscv64.cpio
     cd ..
   
   cd ..
@@ -52,4 +53,6 @@ cd ..
 # Done. Print simulation command.
 GREEN='\033[0;32m'
 NC='\033[0m' 
-echo -e "${GREEN}Done! To test your kernel you can run:${NC}\n  qemu-system-x86_64 -kernel build/bzImage -nographic -serial mon:stdio -append 'console=ttyS0' -m 512 -initrd build/initramfs.linux_amd64.cpio"
+echo -e "${GREEN}Done! To test your kernel you can run:${NC}\n  qemu-system-riscv64 -machine virt -kernel build/Image -nographic -serial mon:stdio -append 'console=ttyS0' -m 512 -initrd build/initramfs.linux_riscv64.cpio"
+# Note: This is the command for web access
+# qemu-system-riscv64 -machine virt -kernel build/Image -nographic -serial mon:stdio -append 'console=ttyS0' -m 512 -initrd build/initramfs.linux_riscv64.cpio -device virtio-net-device,netdev=usernet -netdev user,id=usernet,hostfwd=tcp::10000-:22 -device virtio-rng-pci
